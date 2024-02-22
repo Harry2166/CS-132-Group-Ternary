@@ -1,1 +1,1 @@
-# 132-testing
+# CS-132-Group-Ternary
