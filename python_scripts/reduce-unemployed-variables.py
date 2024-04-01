@@ -15,7 +15,7 @@ data = [
 'PUFC06_MSTAT', # marital status
 'PUFC07_GRADE', # highest grade completed
 'PUFC26_WYNOT', # why no work
-'PUFC40_POCC', # previous job indiactor
+'PUFC38_PREVJOB', # previous job indiactor
 'PUFNEWEMPSTAT', # unemployed stat
 'year-surveynum', # year and what number of survey it is
 "unemployment_rate", # unemployment rate for the year and survey number
@@ -31,7 +31,7 @@ to_be_replaced = {
     "PUFC06_MSTAT" : "C08_MS",
     "PUFC07_GRADE" : "J12C09_GRADE",
     "PUFC26_WYNOT" : "C42_WYNT",
-    "PUFC40_POCC" : "C43_LBEF",
+    "PUFC38_PREVJOB" : "C43_LBEF",
     "PUFNEWEMPSTAT" : "NEWEMPST"
 }
 
@@ -398,8 +398,10 @@ for root, dirs, files in os.walk(r'C:\Users\Admin\Desktop\GitHub Repos\raw-data 
         # we are renaming these columns for the sake of consistency, they are basically the same
         df.rename(columns = {'PUFURB2K10':'PUFURB2015'}, inplace = True)
         df.rename(columns = {'PUFC34_WYNOT':'PUFC26_WYNOT'}, inplace = True)
-        df.rename(columns = {'PUFC41_POCC':'PUFC40_POCC'}, inplace = True)
-        df.rename(columns = {'PUFC31_POCC':'PUFC40_POCC'}, inplace = True)
+        # df.rename(columns = {'PUFC41_POCC':'PUFC40_POCC'}, inplace = True)
+        # df.rename(columns = {'PUFC31_POCC':'PUFC40_POCC'}, inplace = True)
+        # df.rename(columns = {'PUFC40_POCC':'PUFC38_PREVJOB'}, inplace = True)
+        df.rename(columns = {'PUFC28_PREVJOB':'PUFC38_PREVJOB'}, inplace = True)
         for category in data:
             # this must leave only 2016-Q1
             if category not in df.columns and category != 'unemployment_rate':
@@ -487,4 +489,5 @@ for root, dirs, files in os.walk(r'C:\Users\Admin\Desktop\GitHub Repos\raw-data 
         df.insert(cols, "unemployment_rate", unemployment_rate[file[0:7]])
 
         df1 = df[data]
+        print(df['PUFC38_PREVJOB'])
         df1.to_csv(file + ".csv")
