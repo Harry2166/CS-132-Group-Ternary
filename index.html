@@ -151,10 +151,10 @@
                                 </br></br>The dataset used in the research was derived from the mentioned microdata by the following steps:
                                     
                                 </br>1. After being downloaded, the microdata were then unzipped and each folder was placed in another folder. 
-                                </br>2. The researchers then created a Python script (found here), and using the pandas module, added a year-surveynum column to each of the microdata, wherein year is the year of the survey and surveynum is the survey number of that year. 
+                                </br>2. The researchers then created a Python script (<a href="https://github.com/Harry2166/CS-132-Group-Ternary/blob/947b68ebac46f0b6fe5395f4d0bfe2e95f51d100/python_scripts/reduce-to-unemployed.py">found here</a>), and using the pandas module, added a year-surveynum column to each of the microdata, wherein year is the year of the survey and surveynum is the survey number of that year. 
                                 </br>3. After adding that column, each .csv file was then filtered based on the Employment Status (Based on New Criteria on Unemployment) or the PUFNEWEMPSTAT, wherein if a sample had a “2” on the column, it indicated unemployment. As the column title of each .csv file was inconsistent, each differing column title was then renamed to “PUFNEWEMPSTAT,” and from there, filtered if they are equal to 2. 
                                 </br>4. Once the dataset was filtered, they are then saved to a separate indiviual.csv files.
-                                </br>5. After being separated to individual .csv files, they were then transferred to another folder, and the researchers created another Python script (found here), and inserted in the unemployment rate of that given year and survey number. 
+                                </br>5. After being separated to individual .csv files, they were then transferred to another folder, and the researchers created another Python script (<a href="https://github.com/Harry2166/CS-132-Group-Ternary/blob/main/python_scripts/reduce-unemployed-variables.py">found here</a>), and inserted in the unemployment rate of that given year and survey number. 
                                 </br>6. Other columns were also renamed for the sake of consistency. The .csv files were then filtered down to the necessary variables using pandas and were saved to separate .csv files.
                                 </br>7. Using the online tool www.merge-csv.com, the researchers then merged the .csvs together and formed the data set.
                                 </br>8. The names of the columns were then also simplified manually in GSheets by the researchers for the sake of readability.
@@ -169,30 +169,29 @@
 
                                     </br></br>The unemployment rates of the quarters / years were collected from the following reports given by the PSA. The following links are the survey results from the PSA website.
                                     
-                                    </br></br>https://psa.gov.ph/content/2016-annual-labor-and-employment-status
-                                    </br>https://psa.gov.ph/content/2018-annual-labor-and-employment-status
-                                    </br>https://psa.gov.ph/content/preliminary-results-2019-annual-estimates-labor-force-survey-lfs
-                                    </br>https://psa.gov.ph/content/2020-annual-preliminary-estimates-labor-force-survey-lfs
-                                    </br>https://psa.gov.ph/content/2021-annual-labor-market-statistics-preliminary-results
-                                    </br>https://psa.gov.ph/content/2022-annual-provincial-labor-market-statistics-preliminary-results
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/1684062347
-                                    
-                                    </br></br>https://psa.gov.ph/statistics/labor-force-survey/node/53757
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/57724
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/62831
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/69569
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/113855
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/119858
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/127166
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/131057
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/129816
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/133543
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/135724
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/136872
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/137848
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/138752
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/142692
-                                    </br>https://psa.gov.ph/statistics/labor-force-survey/node/144727
+                                    </br></br><a href="https://psa.gov.ph/content/2016-annual-labor-and-employment-status">[1]</a>, 
+									<a href="https://psa.gov.ph/content/2018-annual-labor-and-employment-status">[2]</a>
+                                    <a href="https://psa.gov.ph/content/preliminary-results-2019-annual-estimates-labor-force-survey-lfs">[3]</a>, 
+									<a href="https://psa.gov.ph/content/2020-annual-preliminary-estimates-labor-force-survey-lfs">[4]</a>, 
+                                    <a href="https://psa.gov.ph/content/2021-annual-labor-market-statistics-preliminary-results">[5]</a>, 
+                                    <a href="https://psa.gov.ph/content/2022-annual-provincial-labor-market-statistics-preliminary-results">[6]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/1684062347">[7]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/53757">[8]</a>, 
+									<a href="https://psa.gov.ph/statistics/labor-force-survey/node/57724">[9]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/62831">[10]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/69569">[11]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/113855">[12]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/119858">[13]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/127166">[14]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/131057">[15]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/129816">[16]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/133543">[17]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/135724">[18]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/136872">[19]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/137848">[20]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/138752">[21]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/142692">[22]</a>, 
+                                    <a href="https://psa.gov.ph/statistics/labor-force-survey/node/144727">[23]</a>, 
                                     </p>
 							</section>
 						</div>
