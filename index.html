@@ -69,7 +69,7 @@
 							<section class="box style1">
 								<span class="icon featured fa-thumbs-up"></span>
 								<h3>Solution</h3>
-								<p>The researchers used data science on the collected data to gain insights regarding how the unemployment rate has evolved ever since the implementation of SHS in the Philippines’ education system and whether or not different factors contributed to it too.</p>
+								<p>The researchers will use data science on the collected data to gain insights regarding how the unemployment rate has evolved ever since the implementation of SHS in the Philippines’ education system and whether or not different factors contributed to it too.</p>
 							</section>
 						</div>
 					</div>
@@ -194,11 +194,12 @@
                                 </br>2. The researchers then created a Python script (<a href="https://github.com/Harry2166/CS-132-Group-Ternary/blob/947b68ebac46f0b6fe5395f4d0bfe2e95f51d100/python_scripts/reduce-to-unemployed.py">found here</a>), and using the pandas module, added a year-surveynum column to each of the microdata, wherein year is the year of the survey and surveynum is the survey number of that year. 
                                 </br>3. After adding that column, each .csv file was then filtered based on the Employment Status (Based on New Criteria on Unemployment) or the PUFNEWEMPSTAT, wherein if a sample had a “2” on the column, it indicated unemployment. As the column title of each .csv file was inconsistent, each differing column title was then renamed to “PUFNEWEMPSTAT,” and from there, filtered if they are equal to 2. 
                                 </br>4. Once the dataset was filtered, they are then saved to a separate indiviual.csv files.
-                                </br>5. After being separated to individual .csv files, they were then transferred to another folder, and the researchers created another Python script (<a href="https://github.com/Harry2166/CS-132-Group-Ternary/blob/main/python_scripts/reduce-unemployed-variables.py">found here</a>), and inserted in the unemployment rate of that given year and survey number. 
+                                </br>5. After being separated to individual .csv files, they were then transferred to another folder, and the researchers created another Python script (<a href="https://github.com/Harry2166/CS-132-Group-Ternary/blob/main/python_scripts/reduce-unemployed-variables.py">found here</a>), and inserted in the unemployment rate of that given year and survey number and the associated grade number of their highest grade associated.
                                 </br>6. Other columns were also renamed for the sake of consistency. The .csv files were then filtered down to the necessary variables using pandas and were saved to separate .csv files.
                                 </br>7. Using the online tool www.merge-csv.com, the researchers then merged the .csvs together and formed the data set.
-                                </br>8. The names of the columns were then also simplified manually in GSheets by the researchers for the sake of readability.
-                                </br>9. Samples with blank categories were replaced in GSheets with a value of “99.”
+								</br>8. It was then uploaded to GSheets.
+                                </br>9. The names of the columns were then also simplified manually in GSheets by the researchers for the sake of readability.
+                                </br>10. Samples with blank categories were replaced in GSheets with a value of “99.”
                                 </p>
 							</section>
 						</div>
