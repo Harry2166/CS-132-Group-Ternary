@@ -1,4 +1,4 @@
-# THIS PYTHON SCRIPT IS FOR THE UNEMPLOYED ONLY CSVs.
+# THIS PYTHON SCRIPT IS FOR THE CONVERTED CSVs.
 # This python script is responsible for reducing the csvs to the variables needed
 
 import pandas as pd
@@ -388,7 +388,7 @@ grade_dict6 = {
 
 f = open("myfile.txt", "w")
 
-for root, dirs, files in os.walk(r'C:\Users\Admin\Desktop\GitHub Repos\raw-data UNEMPLOYED ONLY'): # insert directory of where raw-data is stored
+for root, dirs, files in os.walk(r'C:\Users\Admin\Desktop\GitHub Repos\new-raw-data'): # insert directory of where raw-data is stored
     # raw-data UNEMPLOYED ONLY is a folder filled with .csv files that were created from the other python script
     reduced_root = root.split('\\')
     for file in files:
@@ -461,6 +461,12 @@ for root, dirs, files in os.walk(r'C:\Users\Admin\Desktop\GitHub Repos\raw-data 
                 "2023-03.csv" : grade_dict6
             }
 
+            if type(x) is str and len(x.strip()) == 0:
+                return 99
+            elif type(x) is not int: 
+                x.split()
+                x = int(x)
+            
             if grade_equivalent[file] == grade_dict6:
                 for (a,b) in list(grade_equivalent[file].keys()):
                     if x in range(a,b+1):
@@ -478,6 +484,8 @@ for root, dirs, files in os.walk(r'C:\Users\Admin\Desktop\GitHub Repos\raw-data 
                     if x in range(a,b+1):
                         return grade_equivalent[file][(a,b)]
             if x not in grade_equivalent[file].keys():
+                if x == 191:
+                    a = 1
                 print(x)
                 return 99
             return grade_equivalent[file][x]

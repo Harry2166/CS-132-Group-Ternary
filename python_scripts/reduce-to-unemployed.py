@@ -1,5 +1,5 @@
 # THIS PYTHON SCRIPT IS FOR THE OVERALL CSVs.
-# This python script is for reducing the raw data to only the unemployed data
+# This python script is for reducing the raw data to only the unemployed data -> THIS OPERATION IS VOID.
 
 import pandas as pd
 import os
@@ -25,6 +25,6 @@ for root, dirs, files in os.walk(r'C:\Users\Admin\Desktop\GitHub Repos\second-ye
             df.rename(columns = {'NEWEMPST':'PUFNEWEMPSTAT'}, inplace = True) 
 
             # we will be basing unemployment based on this metric
-            unemployed = df[(df["PUFNEWEMPSTAT"] == '2')]
+            unemployed = df
             unemployed.to_csv(specifier + ".csv")
             print(specifier)
