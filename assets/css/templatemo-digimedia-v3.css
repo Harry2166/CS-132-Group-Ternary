@@ -1752,6 +1752,7 @@ contact
 
 .contact-us {
   padding-top: 130px;
+  min-height: calc(100vh - 40px);
 }
 
 .contact-us .section-heading .line-dec {
