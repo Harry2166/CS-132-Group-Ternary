@@ -143,7 +143,7 @@ https://templatemo.com/tm-568-digimedia
                     </div>
                     <div>
                       <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/service-icon-03.png" alt=""></span>
+                        <span class="icon"><img src="assets/images/service-icon-01.png" alt=""></span>
                         References
                       </div>
                     </div>
@@ -309,15 +309,15 @@ https://templatemo.com/tm-568-digimedia
                 <div class="col-lg-12">
                   <div class="menu">
                     <div class="thumb">
-                      <span class="icon"><img src="assets/images/service-icon-03.png" alt=""></span>
+                      <span class="icon"><img src="assets/images/service-icon-01.png" alt=""></span>
                       Visualization
                     </div>
                     <div class="thumb">
-                      <span class="icon"><img src="assets/images/service-icon-04.png" alt=""></span>
+                      <span class="icon"><img src="assets/images/service-icon-02.png" alt=""></span>
                       Methods
                     </div>
                     <div class="thumb last-thumb">
-                      <span class="icon"><img src="assets/images/service-icon-01.png" alt=""></span>
+                      <span class="icon"><img src="assets/images/service-icon-03.png" alt=""></span>
                       Results
                     </div>
                   </div>
@@ -335,15 +335,15 @@ https://templatemo.com/tm-568-digimedia
                       </div>
                       <div class="thumb">
                         <div class="row">
-                          <p>To determine what are the other factors that can affect the employment status, a violin plot and heat map were utilized. Only the most recent quarter (quarter 1 of 2023) was taken into account, as this represents the status of employment in the country that we have today. Data of legal working age were only taken into account in this visualization, ranging from ages 15 - 64. 
+                          <p>To determine the other factors that can affect the employment status, a violin plot and heat map were utilized. Only the most recent quarter (quarter 1 of 2023) was taken into account, as this represents the status of employment in the country that we have today. Data of legal working age were only taken into account in this visualization, ranging from ages 15 - 64. 
                             <br> Note: Temporarily Unemployed refers to individuals neither employed nor unemployed. These also include persons not available and are not looking for work such as housewives, students, and disabled persons.
                           </p>
                           <iframe src="plots/age_distribution.html" height="800" width="1200" frameBorder="0"></iframe>
                           <p>Most employed persons are in the range of 20-50, the typical age for work. Majority of those who are not part of the labor force are at the youngest end of the spectrum. Finally, though might not be obvious, if we look closely (by hovering) at the unemployment rate per age it actually decreases as we go older starting at age 22-23 (the age of graduation).</p>
                           <iframe src="plots/education_sex.html" height="800" width="1200" frameBorder="0"></iframe>
-                          <p>The plot shows how the highest education attainment relate with the number of people in employment status </p>
+                          <p>The plot shows how the highest education attainment relate with the number of people in employment status. Majority who are employed are male, while their highest educational attainment differs </p>
                           <iframe src="plots/marital_status.html" height="800" width="1200" frameBorder="0"></iframe>
-                          <p>Most married and separated people are employed as expected . However, there are also a number of them who are not part of the labor force (possibly housewives / house husbands), we can also see the same observation to widows, though the frequency might be less. Single people also comprise most of those who are not part of the labor force (can be students).  In this survey, those whose marriages were annulled were either employed or not part of the workforce.</p>
+                          <p>Most married and separated people are employed as expected . However, there are also a number of them who are not part of the labor force (possibly housewives / house husbands). We can also see the same observation to widows, though the frequency might be less. Single people also comprise most of those who are not part of the labor force (can be students).  In this survey, those whose marriages were annulled were either employed or not part of the workforce.</p>
                           <iframe src="plots/region_rural_urban.html" height="800" width="1200" frameBorder="0"></iframe>
                         </div>
                       </div>
@@ -358,7 +358,7 @@ https://templatemo.com/tm-568-digimedia
                           <iframe src="plots/rural_urban_unemp.html" height="800" width="1200" frameBorder="0"></iframe>
                           <p>The plots show that unemployed individuals are more likely to be in urban areas. Notice how we have shown in the previous plots that the majority of employed persons in all of the regions live in rural areas.</p>
                           <iframe src="plots/marital_status_unemp.html" height="800" width="1200" frameBorder="0"></iframe>
-                          <p>The plot shows that single individuals are more likely to be unemployed. This may be related to how financial stability is needed in a relationship, hence why less individuals are unemployed in marriage. </p>
+                          <p>The plot shows that single individuals are more likely to be unemployed. This may be related to how financial stability is needed in a relationship, hence why less married individuals are unemployed in marriage. </p>
                           <iframe src="plots/age_distribution_unemp.html" height="800" width="1200" frameBorder="0"></iframe>
                           <p>Unemployment is highest in the age group 20-24. This can be expected as most people would be fresh graduates from college, just entering the workforce and looking for a job.</p>
                           <iframe src="plots/highest_grade_completed_unemp.html" height="800" width="1200" frameBorder="0"></iframe>
@@ -433,10 +433,11 @@ https://templatemo.com/tm-568-digimedia
                                 <!-- <p>You may view this <a href="https://drive.google.com/file/d/1GH9PTn5GhSThXOyjdP9YAHUBDYlKjtNw/view?usp=sharing">link</a> if the graph for OLS is <b>not</b> present</p> -->
                                 <h4>Machine Learning Model Results</h4>
                                 <p>The model first produced a result accuracy of 74.10%. However, the confusion matrix for this stage of the model is presented as follows</p>
-                                <img src="assets/images/our-own-images/balanced.png">
+                                <img src="assets/images/our-own-images/unbalanced.png">
                                 <p>It can be observed that there was absolutely no prediction done for unemployment. This is due to the data being heavily skewed towards employed and temporarily unemployed individuals. As the number of unemployed individuals is significantly fewer than those two, it leads to the results of unemployed individuals being heavily ignored.</p>
                                 <p>Hence, there was a need to balance the data that is to be provided to the machine learning model. Using sk_learn's class_weight property to balance the data, it provided an accuracy of 61.23%, with a more balanced confusion matrix.</p>
-                                <img src="assets/images/our-own-images/unbalanced.png">
+                                <img src="assets/images/our-own-images/balanced.png">
+                                <p>However, with an accuracy of just over 60%, the given social demographics are not enough to purely determine or predict the employment status of an individual. </p>
                               </div>
                           </div>
                         </div>
@@ -469,15 +470,15 @@ https://templatemo.com/tm-568-digimedia
                 <div class="col-lg-12">
                   <div class="menu">
                     <div class="thumb">
-                      <span class="icon"><img src="assets/images/service-icon-03.png" alt=""></span>
+                      <span class="icon"><img src="assets/images/service-icon-01.png" alt=""></span>
                       Discussion
                     </div>
                     <div class="thumb">
-                      <span class="icon"><img src="assets/images/service-icon-04.png" alt=""></span>
+                      <span class="icon"><img src="assets/images/service-icon-02.png" alt=""></span>
                       Limitations
                     </div>
                     <div class="thumb last-thumb">
-                      <span class="icon"><img src="assets/images/service-icon-01.png" alt=""></span>
+                      <span class="icon"><img src="assets/images/service-icon-03.png" alt=""></span>
                       Implications
                     </div>
                     <div class="thumb last-thumb">
@@ -485,7 +486,7 @@ https://templatemo.com/tm-568-digimedia
                       Recommendations
                     </div>
                     <div class="thumb last-thumb">
-                      <span class="icon"><img src="assets/images/service-icon-01.png" alt=""></span>
+                      <span class="icon"><img src="assets/images/service-icon-02.png" alt=""></span>
                       Conclusions
                     </div>
                   </div>
@@ -496,7 +497,8 @@ https://templatemo.com/tm-568-digimedia
                       <div class="thumb">
                         <div class="row">
                           <div class="left-text">
-                            <p>Due to the effect of the lockdown caused by  the pandemic, it is challenging to determine directly whether or not the implementation of SHS has affected the unemployment rate in the country. To address this, the researchers removed 1 year (Q2 2020 - Q1 2021) from the analysis. With the graduation of the first SHS batch as in intervention, an ITS analysis reveals that there was no significant effect after this intervention. However, if we take into account the removed quarters, our question changes to: How did the COVID-19 pandemic affect the unemployment rate? If we run another ITS test to answer this question, with Q2 of 2020 as an intervention (start of the lockdown), as expected there is a significant relationship (unemployment increases). However contradictingly, the trend decreases over time (as restrictions and lockdown ease).  </p>
+                            <h4>Discussion of the Results</h4>
+                            <p>Due to the effect of the lockdown caused by  the pandemic, it is challenging to determine directly whether or not the implementation of SHS has affected the unemployment rate in the country. To address this, the researchers removed 1 year (Q2 2020 - Q1 2021) from the analysis. With the graduation of the first SHS batch as in intervention, an ITS analysis reveals that there was no significant effect after this intervention. However, if we take into account the removed quarters, our question changes to: <i>How did the COVID-19 pandemic affect the unemployment rate?</i> Running another ITS, with Q2 of 2020 as an intervention (start of the lockdown), as expected there is a significant relationship (unemployment increases). However contradictingly, the trend decreases over time (as restrictions and lockdown ease).  </p>
                             <p>The researchers focused on employment status in the first quarter of 2023, revealing several expected trends. The majority of the labor force is between 20 and 50 years old and predominantly married or divorced. In terms of educational attainment, employed individuals are mostly men, with varying levels of education. Regionally, except for the National Capital Region (NCR), most employed people live in rural areas. This finding might be surprising given the common belief that urban areas offer more job opportunities, but it aligns with the fact that a large portion of the country is rural.</p>
                             <p>When examining unemployment, the data shows that most unemployed individuals are men, reflecting their larger presence in the workforce. NCR has the highest number of unemployed people, suggesting that urban areas attract job seekers. This contrasts with the employment data, where rural areas have more employed individuals. The unemployed demographic is primarily single individuals aged 20-24, likely recent graduates or those seeking financial stability before marriage. Over half of the unemployed have completed college or junior high school (JHS). The high number of JHS graduates entering the workforce might indicate skepticism about the effectiveness of senior high school (SHS) programs in preparing them for employment.</p>
                           </div>
@@ -507,8 +509,9 @@ https://templatemo.com/tm-568-digimedia
                       <div class="thumb">
                         <div class="row">
                           <div class="left-text">
+                            <h4>Limitations of the Study</h4>
                             <p>The project focused only on employment status and did not take into account the aspect of income / nature of work. Hence, this cannot be used to find out how  employment relates to the economic status of Filipinos.</p>
-                            <p>The study is also limited to the data currently available at the time of writing  - Q1 of 2023.</p>
+                            <p>The study is also limited to the data currently available at the time of writing  - Q1 of 2023. As such, it was not able to compare results of the past year to the previous years on the months who experience volatility in terms of employment (i.e. the holiday season).</p>
                           </div>
                         </div>
                       </div>
@@ -517,6 +520,7 @@ https://templatemo.com/tm-568-digimedia
                       <div class="thumb">
                         <div class="row">
                           <div class="left-text">
+                            <h4>Implications of the Study</h4>
                             <p>Based on the ITS test and different plots made, we can imply the following that there is no significant relationship between 
                               the unemployment rate and the implementation of the SHS program.</p>
                               <p>However, from the plot of highest education level based on unemployed persons, a lot of unemployed persons are Junior High School completers. This can show that people who would not / 
@@ -533,6 +537,7 @@ https://templatemo.com/tm-568-digimedia
                         <div class="thumb">
                           <div class="row">
                               <div class="left-text">
+                                <h4>Recommendations to the Study</h4>
                                 <p>Although there was no significant relationship found between the unemployment rate and implementation of SHS, more studies can find out on the people's perception about the effectiveness of SHS in helping JHS graduates find a job. Perhaps people's mindset behind SHS may also have an effect in employment of individuals, whether it be employers or the employees themselves.</p>
                                 <p>More studies can also focus and investigate the high unemployment rates in the urban areas, and low unemployment rates in rural parts of the country - contrary to the common belief Filipinos know is that jobs are usually found in highly urbanized areas / cities.</p>
                                 <p>As the latest data of this study was from the first quarter of 2023, the data may still be skewed due to the pandemic, despite being a few years after its occurrence. Perhaps allowing the Philippines more time post-pandemic to settle may bring more fruitful results.</p>
@@ -546,10 +551,11 @@ https://templatemo.com/tm-568-digimedia
                         <div class="thumb">
                           <div class="row">
                             <div class="left-text">
+                              <h4>Conclusion</h4>
                               <p>In conclusion,  no significant relationship between the implementation of the Senior High School (SHS) program and unemployment rates, though the COVID-19 pandemic significantly increased unemployment, which later decreased as restrictions eased.</p>
                               <p>Employment trends revealed most employed individuals are men, married, expected to be in the workforce (in terms of age), live in rural areas, and have different levels of education completed. </p>
                               <p>Future research should explore the effectiveness or perception of Filipinos SHS in job preparation and the reasons behind higher urban unemployment rates.</p>
-                              <p>Other factors that could impact unemployment could also be explored.</p>
+                              <p>Other factors outside of the demographics of an individual that could impact unemployment could also be explored, such as analyzing the economic status of the country during the time.</p>
                             </div>
                           </div>
                         </div>
@@ -623,7 +629,7 @@ https://templatemo.com/tm-568-digimedia
                       <div class="info-post">
                         <div class="icon">
                           <img src="assets/images/phone-icon.png" alt="">
-                          <a href="#">123456789</a>
+                          <a href="#">09275088909</a>
                         </div>
                       </div>
                     </div>
@@ -631,7 +637,7 @@ https://templatemo.com/tm-568-digimedia
                       <div class="info-post">
                         <div class="icon">
                           <img src="assets/images/email-icon.png" alt="">
-                          <a href="#">our@email.com</a>
+                          <a href="#">puquijano1@up.edu.ph</a>
                         </div>
                       </div>
                     </div>
