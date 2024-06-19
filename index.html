@@ -86,8 +86,8 @@ https://templatemo.com/tm-568-digimedia
             <ul class="nav">
               <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
               <li class="scroll-to-section"><a href="#services">Project</a></li>
-              <li class="scroll-to-section"><a href="#blog">EDA</a></li>
-              <li class="scroll-to-section"><a href="#model_interp">Modeling & Interpretation</a></li>
+              <li class="scroll-to-section"><a href="#blog">EDA & Modelling</a></li>
+              <li class="scroll-to-section"><a href="#model_interp">Interpretation</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
               <li class="scroll-to-section"><a href="#contact">Contact</a></li> 
               <li class="scroll-to-section"><a href="#top" class="active"></a></li> 
@@ -141,7 +141,7 @@ https://templatemo.com/tm-568-digimedia
           </div>
         </div>
         <div class="col-lg-12">
-          <div class="naccs">
+          <div class="naccs1">
             <div class="grid">
               <div class="row">
                 <div class="col-lg-12">
@@ -270,7 +270,7 @@ https://templatemo.com/tm-568-digimedia
                                 <p>For this study, the relevant data features are:</p>
                                 <p>Region, Rural Classification, Relationship to Household Head, Sex, Age as of Last Birthday, Marital Status, Highest Grade Completed, Reason for not Looking for Work, Previous Occupation, Employment Status</p>
                                 <p>They were mainly chosen due to their relationship with regards to the research question as important variables that may contribute to the unemployment status of an individual.</p>
-                                <h4>Take a look at our Dataset (It's Very BIG!)</h4>
+                                <h4>Take a look at our Dataset</h4>
                                 <a href="https://docs.google.com/spreadsheets/d/1s-XdOj3-fjkm9A2hxIFvHuSKMsUHyXV8L0oYGZI2hOA/edit?usp=sharing">[1]</a>
                                 <a href="https://docs.google.com/spreadsheets/d/1U-oFQkiSHOcSibR5a9VIfo9FFHkrcri-cirEhjloDt0/edit?usp=sharing">[2]</a>
                                 <a href="https://docs.google.com/spreadsheets/d/1PPBoHihJX6mgJx_Pz028NMSmivLo1_jeolzAUngcjVg/edit?usp=sharing">[3]</a>
@@ -326,7 +326,7 @@ https://templatemo.com/tm-568-digimedia
           </div>
         </div>
         <div class="col-lg-12">
-          <div class="naccs">
+          <div class="naccs2">
             <div class="grid">
               <div class="row">
                 <div class="col-lg-12">
@@ -422,6 +422,9 @@ https://templatemo.com/tm-568-digimedia
                                   were retained for the analysis of the COVID-19 pandemic.</p>
                                 <p>The results of ITS can be checked in Results</p>
                                 <h4>Machine Learning Model</h4>
+                                <p>The machine learning algorithm used was the random forest classifier. It is a model that is best suited for classification and regression. In this case, it was used for classification. It consists of multiple decision trees that provide their input to the data's possible output. The result that is most given from the decision trees will be what is predicted.</p>
+                                <p>Here is an example of what the first 3 decision trees look like:</p>
+                                <img src="assets/images/our-own-images/rfc_example.png" alt="">
                               </div>
                           </div>
                         </div>
@@ -452,6 +455,11 @@ https://templatemo.com/tm-568-digimedia
                                 <p>The counterfactual (black dots) represent what the unemployment rate would be, have our intervention (in this case, lockdown due to COVID-19) not happened. It shows how far off the unemployment rate was from its predicted value (no lockdown). As over time and restrictions ease however, we can see the unemployment rate come closer to its predicted number. Nevertheless, the model estimates that the employment rate increased by 8.15%. ITS on this intervention yielded P>|t| (or our p-value) to be virtually 0 and therefore this effect is statistically significant. Interestingly, the model estimates a small (on average 0.77%) but with a statistically significant trend of a decrease in employment rate each quarter after the intervention. This can be attributed that even though there was a stark rise in the unemployment rate after the intervention, after this the rate continued to decrease and decrease, eventually reaching pre-pandemic levels</p>
                                 <!-- <p>You may view this <a href="https://drive.google.com/file/d/1GH9PTn5GhSThXOyjdP9YAHUBDYlKjtNw/view?usp=sharing">link</a> if the graph for OLS is <b>not</b> present</p> -->
                                 <h4>Machine Learning Model Results</h4>
+                                <p>The model first produced a result accuracy of 74.10%. However, the confusion matrix for this stage of the model is presented as follows</p>
+                                <img src="assets/images/our-own-images/balanced.png">
+                                <p>It can be observed that there was absolutely no prediction done for unemployment. This is due to the data being heavily skewed towards employed and temporarily unemployed individuals. As the number of unemployed individuals is significantly fewer than those two, it leads to the results of unemployed individuals being heavily ignored.</p>
+                                <p>Hence, there was a need to balance the data that is to be provided to the machine learning model. Using sk_learn's class_weight property to balance the data, it provided an accuracy of 61.23%, with a more balanced confusion matrix.</p>
+                                <img src="assets/images/our-own-images/unbalanced.png">
                               </div>
                           </div>
                         </div>
@@ -478,7 +486,7 @@ https://templatemo.com/tm-568-digimedia
           </div>
         </div>
         <div class="col-lg-12">
-          <div class="naccs">
+          <div class="naccs3">
             <div class="grid">
               <div class="row">
                 <div class="col-lg-12">
@@ -510,30 +518,36 @@ https://templatemo.com/tm-568-digimedia
                     <li class="active">
                       <div class="thumb">
                         <div class="row">
-                          <p> Due to the effect of the lockdown caused by  the pandemic, it is challenging to determine directly whether or not the implementation of SHS has affected the unemployment rate in the country. To address this, the researchers removed 1 year (Q2 2020 - Q1 2021) from the analysis. With the graduation of the first SHS batch as in intervention, an ITS analysis reveals that there was no significant effect after this intervention. However, if we take into account the removed quarters, our question changes to: How did the COVID-19 pandemic affect the unemployment rate? If we run another ITS test to answer this question, with Q2 of 2020 as an intervention (start of the lockdown), as expected there is a significant relationship (unemployment increases). However contradictingly, the trend decreases over time (as restrictions and lockdown ease).  </p>
-                          <p>The researchers focused on employment status in the first quarter of 2023, revealing several expected trends. The majority of the labor force is between 20 and 50 years old and predominantly married or divorced. In terms of educational attainment, employed individuals are mostly men, with varying levels of education. Regionally, except for the National Capital Region (NCR), most employed people live in rural areas. This finding might be surprising given the common belief that urban areas offer more job opportunities, but it aligns with the fact that a large portion of the country is rural.</p>
-                          <p>When examining unemployment, the data shows that most unemployed individuals are men, reflecting their larger presence in the workforce. NCR has the highest number of unemployed people, suggesting that urban areas attract job seekers. This contrasts with the employment data, where rural areas have more employed individuals. The unemployed demographic is primarily single individuals aged 20-24, likely recent graduates or those seeking financial stability before marriage. Over half of the unemployed have completed college or junior high school (JHS). The high number of JHS graduates entering the workforce might indicate skepticism about the effectiveness of senior high school (SHS) programs in preparing them for employment.</p>
+                          <div class="left-text">
+                            <p>Due to the effect of the lockdown caused by  the pandemic, it is challenging to determine directly whether or not the implementation of SHS has affected the unemployment rate in the country. To address this, the researchers removed 1 year (Q2 2020 - Q1 2021) from the analysis. With the graduation of the first SHS batch as in intervention, an ITS analysis reveals that there was no significant effect after this intervention. However, if we take into account the removed quarters, our question changes to: How did the COVID-19 pandemic affect the unemployment rate? If we run another ITS test to answer this question, with Q2 of 2020 as an intervention (start of the lockdown), as expected there is a significant relationship (unemployment increases). However contradictingly, the trend decreases over time (as restrictions and lockdown ease).  </p>
+                            <p>The researchers focused on employment status in the first quarter of 2023, revealing several expected trends. The majority of the labor force is between 20 and 50 years old and predominantly married or divorced. In terms of educational attainment, employed individuals are mostly men, with varying levels of education. Regionally, except for the National Capital Region (NCR), most employed people live in rural areas. This finding might be surprising given the common belief that urban areas offer more job opportunities, but it aligns with the fact that a large portion of the country is rural.</p>
+                            <p>When examining unemployment, the data shows that most unemployed individuals are men, reflecting their larger presence in the workforce. NCR has the highest number of unemployed people, suggesting that urban areas attract job seekers. This contrasts with the employment data, where rural areas have more employed individuals. The unemployed demographic is primarily single individuals aged 20-24, likely recent graduates or those seeking financial stability before marriage. Over half of the unemployed have completed college or junior high school (JHS). The high number of JHS graduates entering the workforce might indicate skepticism about the effectiveness of senior high school (SHS) programs in preparing them for employment.</p>
+                          </div>
                         </div>
                       </div>
                     </li>
                     <li>
                       <div class="thumb">
                         <div class="row">
-                          <p>The project focused only on employment status and did not take into account the aspect of income / nature of work. Hence, this cannot be used to find out how  employment relates to the economic status of Filipinos.</p>
-                          <p>The study is also limited to the data currently available at the time of writing  - Q1 of 2023.</p>
+                          <div class="left-text">
+                            <p>The project focused only on employment status and did not take into account the aspect of income / nature of work. Hence, this cannot be used to find out how  employment relates to the economic status of Filipinos.</p>
+                            <p>The study is also limited to the data currently available at the time of writing  - Q1 of 2023.</p>
+                          </div>
                         </div>
                       </div>
                     </li>
                     <li>
                       <div class="thumb">
                         <div class="row">
-                          <p>Based on the ITS test and different plots made we can imply the following:</p>
-                          There is no significant relationship between the unemployment rate and the implementation of the SHS program
-                          - However, from the plot of highest education level based on unemployed persons, a lot of unemployed persons are Junior High School completers. This can show that people who would not / cannot go to college, would rather try and get a job with their JHS diploma rather than enter SHS - a program designed to make them job ready.
-                          With the exception that most employed persons live in Rural areas, most of the demographics of employed persons were expected (age 20-50, married / divorced)
-                          - Majority of employed persons are male whose highest educational attainment differs
-                          - NCR, despite being regarded as the heart of the nation's economy, has a lot of unemployed persons living there.
-                          The pandemic significantly increased the unemployment rate, however, the trend is continuously decreasing with levels of unemployment rate matching pre-pandemic levels / their predicted rate should the pandemic have not happened.
+                          <div class="left-text">
+                            <p>Based on the ITS test and different plots made, we can imply the following that there is no significant relationship between 
+                              the unemployment rate and the implementation of the SHS program.</p>
+                              <p>However, from the plot of highest education level based on unemployed persons, a lot of unemployed persons are Junior High School completers. This can show that people who would not / 
+                              cannot go to college, would rather try and get a job with their JHS diploma rather than enter SHS - a program designed 
+                              to make them job ready.</p>
+                            <p>Additionally, with the exception that most employed persons live in rural areas, most of the demographics of employed persons were expected (age 20-50, married / divorced). Majority of employed persons are males, whose highest educational attainment differs and NCR, despite being regarded as the heart of the nation's economy, has a lot of unemployed persons living there.</p>
+                            <p>Lastly, the pandemic significantly increased the unemployment rate, however, the trend is continuously decreasing with levels of unemployment rate matching pre-pandemic levels / their predicted rate should the pandemic have not happened.</p>
+                          </div>
                         </div>
                       </div>
                     </li>
@@ -542,7 +556,7 @@ https://templatemo.com/tm-568-digimedia
                         <div class="thumb">
                           <div class="row">
                               <div class="left-text">
-                                <p>Although there was no significant relationship found between the unemployment rate and implementation of SHS, more studies can find out on the people’s perception about the effectiveness of SHS in helping JHS graduates find a job. Perhaps people's mindset behind SHS may also have an effect in employment of individuals, whether it be employers or the employees themselves.</p>
+                                <p>Although there was no significant relationship found between the unemployment rate and implementation of SHS, more studies can find out on the people's perception about the effectiveness of SHS in helping JHS graduates find a job. Perhaps people's mindset behind SHS may also have an effect in employment of individuals, whether it be employers or the employees themselves.</p>
                                 <p>More studies can also focus and investigate the high unemployment rates in the urban areas, and low unemployment rates in rural parts of the country - contrary to the common belief Filipinos know is that jobs are usually found in highly urbanized areas / cities.</p>
                                 <p>As the latest data of this study was from the first quarter of 2023, the data may still be skewed due to the pandemic, despite being a few years after its occurrence. Perhaps allowing the Philippines more time post-pandemic to settle may bring more fruitful results.</p>
                               </div>
@@ -554,10 +568,12 @@ https://templatemo.com/tm-568-digimedia
                       <div>
                         <div class="thumb">
                           <div class="row">
-                            <p>In conclusion,  no significant relationship between the implementation of the Senior High School (SHS) program and unemployment rates, though the COVID-19 pandemic significantly increased unemployment, which later decreased as restrictions eased.</p>
-                            <p>Employment trends revealed most employed individuals are men, married, expected to be in the workforce (in terms of age), live in rural areas, and have different levels of education completed. </p>
-                            <p>Future research should explore the effectiveness or perception of Filipinos SHS in job preparation and the reasons behind higher urban unemployment rates.</p>
-                            <p>Other factors that could impact unemployment could also be explored.</p>
+                            <div class="left-text">
+                              <p>In conclusion,  no significant relationship between the implementation of the Senior High School (SHS) program and unemployment rates, though the COVID-19 pandemic significantly increased unemployment, which later decreased as restrictions eased.</p>
+                              <p>Employment trends revealed most employed individuals are men, married, expected to be in the workforce (in terms of age), live in rural areas, and have different levels of education completed. </p>
+                              <p>Future research should explore the effectiveness or perception of Filipinos SHS in job preparation and the reasons behind higher urban unemployment rates.</p>
+                              <p>Other factors that could impact unemployment could also be explored.</p>
+                            </div>
                           </div>
                         </div>
                       </div>

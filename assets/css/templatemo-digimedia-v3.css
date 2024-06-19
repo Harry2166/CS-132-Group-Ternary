@@ -1250,7 +1250,17 @@ Services Style
   margin: 0 auto;
 }
 
-.services .naccs {
+.services .naccs1 {
+  position: relative;
+  z-index: 1;
+}
+
+.services .naccs2 {
+  position: relative;
+  z-index: 1;
+}
+
+.services .naccs3 {
   position: relative;
   z-index: 1;
 }
@@ -1261,7 +1271,20 @@ Services Style
   margin: 0 auto;
 }
 
-.services .naccs .menu div h4 {
+.services .naccs1 .menu div h4 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  width: 100%;
+}
+.services .naccs2 .menu div h4 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.services .naccs3 .menu div h4 {
   color: #fff;
   font-size: 15px;
   font-weight: 400;
@@ -1274,12 +1297,22 @@ Services Style
   min-width: 60px;
 }
 
-.services .naccs .menu {
+.services .naccs1 .menu {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.services .naccs .menu div {
+.services .naccs2 .menu {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services .naccs3 .menu {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services .naccs1 .menu div {
   color: #2a2a2a;
   margin: 0px;
   width: 15%;
@@ -1293,14 +1326,64 @@ Services Style
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.services .naccs .menu div .thumb {
+.services .naccs1 .menu div .thumb {
   display: inline-block;
   width: 100%;
   padding: 30px 0px;
   background-color: #fff;
 }
 
-.services .naccs .menu div.active {
+.services .naccs1 .menu div.active {
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+.services .naccs2 .menu div {
+  color: #2a2a2a;
+  margin: 0px;
+  width: 15%;
+  font-size: 20px;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  border-radius: 15px;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.services .naccs2 .menu div .thumb {
+  display: inline-block;
+  width: 100%;
+  padding: 30px 0px;
+  background-color: #fff;
+}
+
+.services .naccs2 .menu div.active {
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+.services .naccs3 .menu div {
+  color: #2a2a2a;
+  margin: 0px;
+  width: 15%;
+  font-size: 20px;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  border-radius: 15px;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.services .naccs3 .menu div .thumb {
+  display: inline-block;
+  width: 100%;
+  padding: 30px 0px;
+  background-color: #fff;
+}
+
+.services .naccs3 .menu div.active {
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
 }
 
@@ -1987,7 +2070,17 @@ responsive
     margin-right: 0px;
     margin-bottom: 45px;;
   }
-  .services .naccs .menu div {
+  .services .naccs1 .menu div {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .services .naccs2 .menu div {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .services .naccs3 .menu div {
     font-size: 15px;
     font-weight: 500;
   }
@@ -2044,7 +2137,15 @@ responsive
   .service-item .right-content {
     display: inline-block;
   }
-  .services .naccs .menu div .thumb {
+  .services .naccs1 .menu div .thumb {
+    padding: 5px;
+  }
+
+  .services .naccs2 .menu div .thumb {
+    padding: 5px;
+  }
+
+  .services .naccs3 .menu div .thumb {
     padding: 5px;
   }
   .services .icon img {
@@ -2053,7 +2154,15 @@ responsive
   .services ul.nacc li.active {
     padding: 45px;
   }
-  .services .naccs .menu div  {
+  .services .naccs1 .menu div  {
+    font-size: 0px;
+  }
+
+  .services .naccs2 .menu div  {
+    font-size: 0px;
+  }
+
+  .services .naccs3 .menu div  {
     font-size: 0px;
   }
   .services ul.nacc li .right-image img {
