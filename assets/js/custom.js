@@ -107,20 +107,54 @@
 
 
   // Acc
-  $(document).on("click", ".naccs .menu div", function() {
+  $(document).on("click", ".naccs1 .menu div", function() {
     var numberIndex = $(this).index();
 
     if (!$(this).is("active")) {
-        $(".naccs .menu div").removeClass("active");
-        $(".naccs ul li").removeClass("active");
+        $(".naccs1 .menu div").removeClass("active");
+        $(".naccs1 ul li").removeClass("active");
 
         $(this).addClass("active");
-        $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+        $(".naccs1 ul").find("li:eq(" + numberIndex + ")").addClass("active");
 
-        var listItemHeight = $(".naccs ul")
+        var listItemHeight = $(".naccs1 ul")
           .find("li:eq(" + numberIndex + ")")
           .innerHeight();
-        $(".naccs ul").height(listItemHeight + "px");
+        $(".naccs1 ul").height(listItemHeight + "px");
+      }
+  });
+
+  $(document).on("click", ".naccs2 .menu div", function() {
+    var numberIndex = $(this).index();
+
+    if (!$(this).is("active")) {
+        $(".naccs2 .menu div").removeClass("active");
+        $(".naccs2 ul li").removeClass("active");
+
+        $(this).addClass("active");
+        $(".naccs2 ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+        var listItemHeight = $(".naccs2 ul")
+          .find("li:eq(" + numberIndex + ")")
+          .innerHeight();
+        $(".naccs2 ul").height(listItemHeight + "px");
+      }
+  });
+
+  $(document).on("click", ".naccs3 .menu div", function() {
+    var numberIndex = $(this).index();
+
+    if (!$(this).is("active")) {
+        $(".naccs3 .menu div").removeClass("active");
+        $(".naccs3 ul li").removeClass("active");
+
+        $(this).addClass("active");
+        $(".naccs3 ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+        var listItemHeight = $(".naccs3 ul")
+          .find("li:eq(" + numberIndex + ")")
+          .innerHeight();
+        $(".naccs3 ul").height(listItemHeight + "px");
       }
   });
 
